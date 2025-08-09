@@ -1,8 +1,761 @@
-街道，空白的街道上有小狗，2025，#小狗 #小猫 #宁德，(18.15%, 43.46%)，https://s1.imagehub.cc/images/2025/08/07/11bb1d36af7410995458e8b01c99b54e.md.png
-宁德十中，官网，2010，#学校，(21.3627%, 40.0060%)，https://s1.imagehub.cc/images/2025/08/09/7f141d88cb4ad47a44d70cab8e0af620.png
-宁德十中，官网，2010，#学校，(21.3627%, 40.0060%)，https://s1.imagehub.cc/images/2025/08/09/06fa8210942af7b3570d6ad5cb9d1640.png
-宁德一中，操场，2016，#学校，(1.0%, 1.0%)，http://www.ndyz.cn/xxgk/xyfg/201610/W020190128688123385972.jpg
-宁德一中，操场，2016，#学校，(1.0%, 1.0%)，http://www.ndyz.cn/xxgk/xyfg/201610/W020190128688123381834.jpg
-宁德一中，教学楼，2016，#学校，(1.0%, 1.0%)，http://www.ndyz.cn/xxgk/xyfg/201610/W020190128688107396787.jpg
-宁德一中，教学楼，2016，#学校，(1.0%, 1.0%)，http://www.ndyz.cn/xxgk/xyfg/201610/W020190128688107399134.jpg
-宁德一中，教学楼，2016，#学校，(1.0%, 1.0%)，http://www.ndyz.cn/xxgk/xyfg/201610/W020190128688107393981.jpg
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>搜索 图片库</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        :root {
+            /* Material You 动态颜色 */
+            --md-sys-color-primary: #6750A4;
+            --md-sys-color-on-primary: #FFFFFF;
+            --md-sys-color-primary-container: #EADDFF;
+            --md-sys-color-on-primary-container: #21005D;
+            --md-sys-color-secondary: #625B71;
+            --md-sys-color-on-secondary: #FFFFFF;
+            --md-sys-color-secondary-container: #E8DEF8;
+            --md-sys-color-on-secondary-container: #1D192B;
+            --md-sys-color-tertiary: #7D5260;
+            --md-sys-color-on-tertiary: #FFFFFF;
+            --md-sys-color-tertiary-container: #FFD8E4;
+            --md-sys-color-on-tertiary-container: #31111D;
+            --md-sys-color-error: #B3261E;
+            --md-sys-color-on-error: #FFFFFF;
+            --md-sys-color-error-container: #F9DEDC;
+            --md-sys-color-on-error-container: #410E0B;
+            --md-sys-color-outline: #79747E;
+            --md-sys-color-background: #FFFBFE;
+            --md-sys-color-on-background: #1C1B1F;
+            --md-sys-color-surface: #FFFBFE;
+            --md-sys-color-on-surface: #1C1B1F;
+            --md-sys-color-surface-variant: #E7E0EC;
+            --md-sys-color-on-surface-variant: #49454F;
+            
+            /* 阴影 */
+            --md-elevation-1: 0 1px 3px 1px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            --md-elevation-2: 0 2px 6px 2px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            --md-elevation-3: 0 4px 8px 3px rgba(0,0,0,0.12), 0 1px 3px rgba(0,0,0,0.24);
+            
+            /* 圆角 */
+            --md-shape-corner-extra-small: 4px;
+            --md-shape-corner-small: 8px;
+            --md-shape-corner-medium: 12px;
+            --md-shape-corner-large: 16px;
+            --md-shape-corner-extra-large: 28px;
+            --md-shape-corner-full: 9999px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        body {
+            background-color: var(--md-sys-color-background);
+            color: var(--md-sys-color-on-background);
+            min-height: 100vh;
+            padding: 16px;
+        }
+        
+        .container {
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+        
+        /* 顶部应用栏 */
+        .app-bar {
+            display: flex;
+            align-items: center;
+            padding: 16px;
+            margin-bottom: 24px;
+            border-radius: var(--md-shape-corner-large);
+            background-color: var(--md-sys-color-primary);
+            color: var(--md-sys-color-on-primary);
+            box-shadow: var(--md-elevation-1);
+        }
+        
+        .app-bar h1 {
+            font-size: 22px;
+            font-weight: 500;
+            flex-grow: 1;
+        }
+        
+        /* 搜索框 */
+        .search-container {
+            position: relative;
+            margin-bottom: 24px;
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        .search-box {
+            width: 100%;
+            padding: 16px 48px 16px 16px;
+            border: none;
+            border-radius: var(--md-shape-corner-full);
+            background-color: var(--md-sys-color-surface-variant);
+            color: var(--md-sys-color-on-surface);
+            font-size: 16px;
+            box-shadow: var(--md-elevation-1);
+            transition: all 0.3s ease;
+        }
+        
+        .search-box:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px var(--md-sys-color-primary);
+        }
+        
+        .search-btn {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--md-sys-color-primary);
+            cursor: pointer;
+            padding: 8px;
+            border-radius: var(--md-shape-corner-full);
+        }
+        
+        /* 标签容器 */
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 24px;
+            animation: fadeIn 0.5s ease-out 0.2s both;
+        }
+        
+        .tag {
+            padding: 8px 16px;
+            background-color: var(--md-sys-color-secondary-container);
+            color: var(--md-sys-color-on-secondary-container);
+            border-radius: var(--md-shape-corner-full);
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: var(--md-elevation-1);
+        }
+        
+        .tag:hover {
+            background-color: var(--md-sys-color-primary-container);
+            color: var(--md-sys-color-on-primary-container);
+            box-shadow: var(--md-elevation-2);
+        }
+        
+        /* 图片网格 */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+        
+        .image-card {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--md-shape-corner-medium);
+            overflow: hidden;
+            box-shadow: var(--md-elevation-1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .image-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--md-elevation-3);
+        }
+        
+        .image-container {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .image-card:hover .image-container img {
+            transform: scale(1.05);
+        }
+        
+        .image-info {
+            padding: 16px;
+        }
+        
+        .image-title {
+            font-weight: 500;
+            margin-bottom: 4px;
+            font-size: 16px;
+            color: var(--md-sys-color-on-surface);
+        }
+        
+        .image-subtitle {
+            color: var(--md-sys-color-on-surface-variant);
+            margin-bottom: 4px;
+            font-size: 14px;
+        }
+        
+        .image-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 8px;
+            font-size: 12px;
+            color: var(--md-sys-color-outline);
+        }
+        
+        /* 模态框 */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .modal.active {
+            display: flex;
+            opacity: 1;
+        }
+        
+        .modal-content {
+            background-color: var(--md-sys-color-surface);
+            border-radius: var(--md-shape-corner-extra-large);
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            overflow: hidden;
+            box-shadow: var(--md-elevation-3);
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .modal.active .modal-content {
+            transform: translateY(0);
+        }
+        
+        .modal-image-container {
+            flex: 1;
+            min-height: 300px;
+            max-height: 60vh;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .modal-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background-color: var(--md-sys-color-surface-variant);
+        }
+        
+        .modal-info {
+            padding: 24px;
+            overflow-y: auto;
+        }
+        
+        .modal-title {
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: var(--md-sys-color-on-surface);
+        }
+        
+        .modal-subtitle {
+            font-size: 16px;
+            color: var(--md-sys-color-on-surface-variant);
+            margin-bottom: 16px;
+        }
+        
+        .modal-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        
+        .modal-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: var(--md-sys-color-on-surface-variant);
+        }
+        
+        .modal-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 16px;
+        }
+        
+        .modal-tag {
+            padding: 4px 12px;
+            background-color: var(--md-sys-color-secondary-container);
+            color: var(--md-sys-color-on-secondary-container);
+            border-radius: var(--md-shape-corner-full);
+            font-size: 12px;
+        }
+        
+        .modal-actions {
+            display: flex;
+            justify-content: flex-end;
+            padding: 16px;
+            gap: 8px;
+            border-top: 1px solid var(--md-sys-color-surface-variant);
+        }
+        
+        .modal-close, .modal-download {
+            padding: 10px 16px;
+            border-radius: var(--md-shape-corner-full);
+            border: none;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .modal-close {
+            background-color: transparent;
+            color: var(--md-sys-color-primary);
+        }
+        
+        .modal-close:hover {
+            background-color: rgba(var(--md-sys-color-primary-rgb), 0.08);
+        }
+        
+        .modal-download {
+            background-color: var(--md-sys-color-primary);
+            color: var(--md-sys-color-on-primary);
+        }
+        
+        .modal-download:hover {
+            background-color: var(--md-sys-color-primary-dark);
+            box-shadow: var(--md-elevation-1);
+        }
+        
+        /* 加载动画 */
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            grid-column: 1 / -1;
+        }
+        
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid var(--md-sys-color-surface-variant);
+            border-top-color: var(--md-sys-color-primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        /* 空状态 */
+        .empty-state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            grid-column: 1 / -1;
+            text-align: center;
+            color: var(--md-sys-color-on-surface-variant);
+        }
+        
+        .empty-state-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+            color: var(--md-sys-color-outline);
+        }
+        
+        /* 动画 */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+            
+            .modal-content {
+                width: 95%;
+                max-height: 85vh;
+            }
+            
+            .modal-info {
+                padding: 16px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+            
+            .app-bar {
+                padding: 12px;
+            }
+            
+            .app-bar h1 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 顶部应用栏 -->
+        <div class="app-bar">
+            <h1>图片搜索</h1>
+            <span class="material-symbols-outlined">photo_library</span>
+        </div>
+        
+        <!-- 搜索框 -->
+        <div class="search-container">
+            <input type="text" class="search-box" id="searchInput" placeholder="搜索图片..." aria-label="搜索图片">
+            <button class="search-btn" id="searchBtn" aria-label="搜索">
+                <span class="material-symbols-outlined">search</span>
+            </button>
+        </div>
+        
+        <!-- 随机标签 -->
+        <div class="tag-container" id="randomTags"></div>
+        
+        <!-- 图片网格 -->
+        <div class="gallery" id="imageGallery">
+            <div class="loading">
+                <div class="loading-spinner"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 图片详情模态框 -->
+    <div class="modal" id="imageModal">
+        <div class="modal-content">
+            <div class="modal-image-container">
+                <img id="modalImage" src="" alt="">
+            </div>
+            <div class="modal-info">
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <p class="modal-subtitle" id="modalSubtitle"></p>
+                <div class="modal-meta">
+                    <div class="modal-meta-item">
+                        <span class="material-symbols-outlined">calendar_today</span>
+                        <span id="modalYear"></span>
+                    </div>
+                    <div class="modal-meta-item">
+                        <span class="material-symbols-outlined">location_on</span>
+                        <span id="modalCoords"></span>
+                    </div>
+                </div>
+                <div class="modal-tags" id="modalTags"></div>
+            </div>
+            <div class="modal-actions">
+                <button class="modal-close" id="modalClose">
+                    <span class="material-symbols-outlined">close</span>
+                    关闭
+                </button>
+                <button class="modal-download" id="modalDownload">
+                    <span class="material-symbols-outlined">download</span>
+                    下载
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // DOM 元素
+            const searchInput = document.getElementById('searchInput');
+            const searchBtn = document.getElementById('searchBtn');
+            const randomTagsContainer = document.getElementById('randomTags');
+            const imageGallery = document.getElementById('imageGallery');
+            const imageModal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalSubtitle = document.getElementById('modalSubtitle');
+            const modalYear = document.getElementById('modalYear');
+            const modalCoords = document.getElementById('modalCoords');
+            const modalTags = document.getElementById('modalTags');
+            const modalClose = document.getElementById('modalClose');
+            const modalDownload = document.getElementById('modalDownload');
+            
+            // 数据存储
+            let imageData = [];
+            let allTags = new Set();
+            let currentImage = null;
+            
+            // 加载图片数据
+            function loadImageData() {
+                imageGallery.innerHTML = `
+                    <div class="loading">
+                        <div class="loading-spinner"></div>
+                    </div>
+                `;
+                
+                fetch('mapp.txt')
+                    .then(response => {
+                        if (!response.ok) throw new Error('文件加载失败');
+                        return response.text();
+                    })
+                    .then(text => {
+                        if (!text.trim()) throw new Error('文件内容为空');
+                        
+                        const lines = text.split('\n').filter(line => line.trim() !== '');
+                        imageData = lines.map(line => {
+                            const [title, subtitle, year, tags, coords, url] = line.split('，').map(item => item.trim());
+                            const tagList = tags.split(',').map(tag => tag.trim());
+                            
+                            tagList.forEach(tag => allTags.add(tag));
+                            
+                            return {
+                                title,
+                                subtitle,
+                                year,
+                                tags: tagList,
+                                coords,
+                                url
+                            };
+                        }).filter(item => item.url); // 过滤掉无效数据
+                        
+                        if (imageData.length === 0) {
+                            throw new Error('没有解析到有效的图片数据');
+                        }
+                        
+                        displayImages(imageData);
+                        displayRandomTags();
+                    })
+                    .catch(error => {
+                        console.error('加载错误:', error);
+                        imageGallery.innerHTML = `
+                            <div class="empty-state">
+                                <span class="material-symbols-outlined empty-state-icon">error</span>
+                                <h3>加载数据失败</h3>
+                                <p>${error.message}</p>
+                                <p>请检查文件是否存在且格式正确</p>
+                                <button onclick="loadImageData()" style="margin-top: 16px; padding: 8px 16px; background-color: var(--md-sys-color-primary); color: var(--md-sys-color-on-primary); border: none; border-radius: var(--md-shape-corner-full); cursor: pointer;">
+                                    重试
+                                </button>
+                            </div>
+                        `;
+                    });
+            }
+            
+            // 显示图片
+            function displayImages(images) {
+                if (images.length === 0) {
+                    imageGallery.innerHTML = `
+                        <div class="empty-state">
+                            <span class="material-symbols-outlined empty-state-icon">search_off</span>
+                            <h3>没有找到匹配的图片</h3>
+                            <p>尝试不同的搜索词或标签</p>
+                        </div>
+                    `;
+                    return;
+                }
+                
+                imageGallery.innerHTML = '';
+                
+                images.forEach(image => {
+                    const card = document.createElement('div');
+                    card.className = 'image-card';
+                    card.tabIndex = 0;
+                    card.setAttribute('role', 'button');
+                    card.setAttribute('aria-label', `查看图片: ${image.title}`);
+                    
+                    card.innerHTML = `
+                        <div class="image-container">
+                            <img src="${image.url}" alt="${image.title}" loading="lazy">
+                        </div>
+                        <div class="image-info">
+                            <div class="image-title">${image.title}</div>
+                            <div class="image-subtitle">${image.subtitle}</div>
+                            <div class="image-meta">
+                                <span>${image.year}</span>
+                                <span>${image.coords}</span>
+                            </div>
+                        </div>
+                    `;
+                    
+                    card.addEventListener('click', () => openModal(image));
+                    card.addEventListener('keydown', (e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            openModal(image);
+                        }
+                    });
+                    
+                    imageGallery.appendChild(card);
+                });
+            }
+            
+            // 显示随机标签
+            function displayRandomTags() {
+                const tagsArray = Array.from(allTags);
+                randomTagsContainer.innerHTML = '';
+                
+                if (tagsArray.length === 0) return;
+                
+                // 随机选择5-10个标签
+                const randomCount = Math.min(Math.floor(Math.random() * 6) + 5, tagsArray.length);
+                const shuffled = [...tagsArray].sort(() => 0.5 - Math.random());
+                const selectedTags = shuffled.slice(0, randomCount);
+                
+                selectedTags.forEach(tag => {
+                    const tagElement = document.createElement('div');
+                    tagElement.className = 'tag';
+                    tagElement.textContent = tag;
+                    tagElement.tabIndex = 0;
+                    tagElement.setAttribute('role', 'button');
+                    tagElement.setAttribute('aria-label', `搜索标签: ${tag}`);
+                    
+                    tagElement.addEventListener('click', () => {
+                        searchInput.value = tag;
+                        searchImages();
+                        searchInput.focus();
+                    });
+                    
+                    tagElement.addEventListener('keydown', (e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            searchInput.value = tag;
+                            searchImages();
+                            searchInput.focus();
+                        }
+                    });
+                    
+                    randomTagsContainer.appendChild(tagElement);
+                });
+            }
+            
+            // 搜索图片
+            function searchImages() {
+                const searchTerm = searchInput.value.toLowerCase().trim();
+                
+                if (!searchTerm) {
+                    displayImages(imageData);
+                    return;
+                }
+                
+                // 添加搜索动画
+                imageGallery.style.opacity = '0.5';
+                imageGallery.style.transition = 'opacity 0.3s ease';
+                
+                setTimeout(() => {
+                    const filteredImages = imageData.filter(image => {
+                        return (
+                            image.title.toLowerCase().includes(searchTerm) ||
+                            image.subtitle.toLowerCase().includes(searchTerm) ||
+                            image.year.toLowerCase().includes(searchTerm) ||
+                            image.coords.toLowerCase().includes(searchTerm) ||
+                            image.tags.some(tag => tag.toLowerCase().includes(searchTerm))
+                        );
+                    });
+                    
+                    displayImages(filteredImages);
+                    imageGallery.style.opacity = '1';
+                }, 300);
+            }
+            
+            // 打开模态框
+            function openModal(image) {
+                currentImage = image;
+                
+                modalImage.src = image.url;
+                modalImage.alt = image.title;
+                modalTitle.textContent = image.title;
+                modalSubtitle.textContent = image.subtitle;
+                modalYear.textContent = image.year;
+                modalCoords.textContent = image.coords;
+                
+                modalTags.innerHTML = '';
+                image.tags.forEach(tag => {
+                    const tagElement = document.createElement('span');
+                    tagElement.className = 'modal-tag';
+                    tagElement.textContent = tag;
+                    modalTags.appendChild(tagElement);
+                });
+                
+                imageModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            
+            // 关闭模态框
+            function closeModal() {
+                imageModal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            
+            // 下载图片
+            function downloadImage() {
+                if (!currentImage) return;
+                
+                const link = document.createElement('a');
+                link.href = currentImage.url;
+                link.download = `${currentImage.title.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.jpg`;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+            
+            // 事件监听
+            searchBtn.addEventListener('click', searchImages);
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    searchImages();
+                }
+            });
+            
+            modalClose.addEventListener('click', closeModal);
+            modalDownload.addEventListener('click', downloadImage);
+            
+            imageModal.addEventListener('click', function(e) {
+                if (e.target === imageModal) {
+                    closeModal();
+                }
+            });
+            
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && imageModal.classList.contains('active')) {
+                    closeModal();
+                }
+            });
+            
+            // 每30秒刷新一次随机标签
+            setInterval(displayRandomTags, 30000);
+            
+            // 初始加载
+            loadImageData();
+        });
+    </script>
+</body>
+</html>
